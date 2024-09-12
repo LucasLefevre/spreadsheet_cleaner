@@ -1,3 +1,4 @@
+/** @odoo-module **/
 import { UIPlugin, registries, helpers } from "@odoo/o-spreadsheet";
 import { omit } from "@web/core/utils/objects";
 import { sprintf } from "@web/core/utils/strings";
