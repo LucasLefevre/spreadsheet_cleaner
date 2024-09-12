@@ -70,7 +70,8 @@ export class FileCleanerPlugin extends UIPlugin {
 
     checkStringTranslation(position, cell) {
         const evaluatedCell = this.getters.getEvaluatedCell(position);
-        if (!cell.isFormula && evaluatedCell.type === "text" && !evaluatedCell.link) {
+        const isInFirstSheet = position.sheetId === this.getters.getSheetIds()[0]
+        if (isInFirstSheet && !cell.isFormula && evaluatedCell.type === "text" && !evaluatedCell.link) {
             // exclude strings like "%"
             const isAlpha = /[A-Za-z]+/.test(evaluatedCell.value);
             if (isAlpha) {
