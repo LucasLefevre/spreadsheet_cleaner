@@ -15,7 +15,7 @@ topbarMenuRegistry.addChild("clean_download_as_json", ["file"], {
         const data  = env.model.exportData()
         data.revisionId = "START_REVISION";
         await downloadFile(
-            JSON.stringify(data, undefined, 4),
+            JSON.stringify(data),
             "cleaned.osheet.json",
             "application/json"
         );
