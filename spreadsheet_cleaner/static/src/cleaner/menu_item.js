@@ -1,3 +1,5 @@
+/** @odoo-module **/
+
 import { registries } from "@odoo/o-spreadsheet";
 import { downloadFile } from "@web/core/network/download";
 const { topbarMenuRegistry } = registries;
